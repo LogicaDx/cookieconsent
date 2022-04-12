@@ -3,19 +3,26 @@
  https://github.com/LogicaDx/cookieconsent
  Author LogicaDx
 */
+import React, { Component } from 'react'
 
-'use strict'
+export default class Page Component {
+  componentDidMount() {
+    const detectBrowserLanguage = require('detect-browser-language')
+    this.setState({ userLanguage: detectBrowserLanguage() })
+  }
 
-module.exports = function() {
-  return (navigator.languages && navigator.languages[0]) ||
-    navigator.language ||
-    navigator.userLanguage
+  render() {
+    const { userLanguage } = this.state
+
+    return <h1>{userLanguage}</h1>
+  }
 }
 cookie_name:"cc_cookie",cookie_expiration:182,cookie_domain:window.location.hostname,cookie_path:"/",cookie_same_site:"Lax",use_rfc_cookie:!1,autoclear_cookies:!0,revision:0,script_selector:"data-cookiecategory"},m={},g,t={},C=null,K=!1,Q=!1,na=!1,Ca=!1,oa=!1,v,Y,U,pa,Da,Ea,Fa=!1,Z=!0,Sa="",V=[],xa=!1,Ga,Ha=[],Ta=[],Ia=[],Ua=!1,qa,Ja,Ka=[],ja=[],R=[],I=[],ya=[],ra=document.documentElement,L,sa,x,aa,
 ta,W,S,T,ba,E,M,ua,ka,la,y,ca,da,ea,fa,Va=function(a){function b(n){return(a||document).querySelectorAll('a[data-cc="'+n+'"], button[data-cc="'+n+'"]')}function c(n,p){n.preventDefault?n.preventDefault():n.returnValue=!1;m.accept(p);m.hideSettings();m.hide()}for(var d=b("c-settings"),f=b("accept-all"),l=b("accept-necessary"),q=b("accept-selection"),h=0;h<d.length;h++)d[h].setAttribute("aria-haspopup","dialog"),z(d[h],"click",function(n){n.preventDefault?n.preventDefault():n.returnValue=!1;m.showSettings(0)});
 for(h=0;h<f.length;h++)z(f[h],"click",function(n){c(n,"all")});for(h=0;h<q.length;h++)z(q[h],"click",function(n){c(n)});for(h=0;h<l.length;h++)z(l[h],"click",function(n){c(n,[])})},za=function(a,b){if(Object.prototype.hasOwnProperty.call(b,a))return a;if(0<va(b).length)return Object.prototype.hasOwnProperty.call(b,e.current_lang)?e.current_lang:va(b)[0]},Wa=function(){function a(c,d){var f=!1,l=!1;try{for(var q=c.querySelectorAll(b.join(':not([tabindex="-1"]), ')),h,n=q.length,p=0;p<n;)h=q[p].getAttribute("data-focus"),
 l||"1"!==h?"0"===h&&(f=q[p],l||"0"===q[p+1].getAttribute("data-focus")||(l=q[p+1])):l=q[p],p++}catch(F){return c.querySelectorAll(b.join(", "))}d[0]=q[0];d[1]=q[q.length-1];d[2]=f;d[3]=l}var b=["[href]","button","input","details",'[tabindex="0"]'];a(M,ja);Q&&a(x,Ka)},La=function(a){!0===g.force_consent&&J(ra,"force--consent");if(!x){x=k("div");var b=k("div"),c=k("div");x.id="cm";b.id="c-inr-i";c.id="cm-ov";x.setAttribute("role","dialog");x.setAttribute("aria-modal","true");x.setAttribute("aria-hidden",
-"false");x.setAttribute("aria-labelledby","c-ttl");x.setAttribute("aria-describedby","c-txt");sa.appendChild(x);sa.appendChild(c);x.style.visibility=c.style.visibility="hidden";c.style.opacity=0}if(c=g.languages[a].consent_modal.title)aa||(aa=k("div"),aa.id="c-ttl",aa.setAttribute("role","heading"),aa.setAttribute("aria-level","2"),b.appendChild(aa)),aa.innerHTML=c;c=g.languages[a].consent_modal.description;Fa&&(c=Z?c.replace("{{revision_message}}",""):c.replace("{{revision_message}}",Sa||g.languages[a].consent_modal.revision_message||
+"false");x.setAttribute("aria-labelledby","c-ttl");x.setAttribute("aria-describedby","c-txt");sa.appendChild(x);sa.appendChild(c);x.style.visibility=c.style.visibility="hidden";c.style.opacity=0}if(c=g.
+s[a].consent_modal.title)aa||(aa=k("div"),aa.id="c-ttl",aa.setAttribute("role","heading"),aa.setAttribute("aria-level","2"),b.appendChild(aa)),aa.innerHTML=c;c=g.languages[a].consent_modal.description;Fa&&(c=Z?c.replace("{{revision_message}}",""):c.replace("{{revision_message}}",Sa||g.languages[a].consent_modal.revision_message||
 ""));ta||(ta=k("div"),ta.id="c-txt",b.appendChild(ta));ta.innerHTML=c;c=g.languages[a].consent_modal.primary_btn;var d=g.languages[a].consent_modal.secondary_btn;if(c){if(!W){W=k("button");W.id="c-p-bn";W.className="c-bn";var f;"accept_all"===c.role&&(f="all");z(W,"click",function(){m.hide();m.accept(f)})}W.textContent=g.languages[a].consent_modal.primary_btn.text}d&&(S||(S=k("button"),S.id="c-s-bn",S.className="c-bn c_link","accept_necessary"===d.role?z(S,"click",function(){m.hide();m.accept([])}):
 z(S,"click",function(){m.showSettings(0)})),S.textContent=g.languages[a].consent_modal.secondary_btn.text);a=g.gui_options;ba||(ba=k("div"),ba.id="c-inr",ba.appendChild(b));T||(T=k("div"),T.id="c-bns",a&&a.consent_modal&&!0===a.consent_modal.swap_buttons?(d&&T.appendChild(S),c&&T.appendChild(W),T.className="swap"):(c&&T.appendChild(W),d&&T.appendChild(S)),(c||d)&&ba.appendChild(T),x.appendChild(ba));Q=!0},ab=function(a){if(E)y=k("div"),y.id="s-bl";else{E=k("div");var b=k("div"),c=k("div"),d=k("div");
 M=k("div");ua=k("div");var f=k("div");ka=k("button");var l=k("div");la=k("div");var q=k("div");E.id="s-cnt";b.id="c-vln";d.id="c-s-in";c.id="cs";ua.id="s-ttl";M.id="s-inr";f.id="s-hdr";la.id="s-bl";ka.id="s-c-bn";q.id="cs-ov";l.id="s-c-bnc";ka.className="c-bn";E.setAttribute("role","dialog");E.setAttribute("aria-modal","true");E.setAttribute("aria-hidden","true");E.setAttribute("aria-labelledby","s-ttl");ua.setAttribute("role","heading");E.style.visibility=q.style.visibility="hidden";q.style.opacity=
