@@ -4,10 +4,18 @@
  Author LogicaDx
 */
 
-(function(){var kb=function(eb){var import React from 'react'
-import detectBrowserLanguage from 'detect-browser-language'
+import React, { Component } from 'react'
 
-export default () =>,
+export default class Page Component {
+  componentDidMount() {
+    const detectBrowserLanguage = require('detect-browser-language')
+    this.setState({ userLanguage: detectBrowserLanguage() })
+  }
+
+  render() {
+    const { userLanguage } = this.state
+  }
+}
 cookie_name:"cc_cookie",cookie_expiration:182,cookie_domain:window.location.hostname,cookie_path:"/",cookie_same_site:"Lax",use_rfc_cookie:!1,autoclear_cookies:!0,revision:0,script_selector:"data-cookiecategory"},m={},g,t={},C=null,K=!1,Q=!1,na=!1,Ca=!1,oa=!1,v,Y,U,pa,Da,Ea,Fa=!1,Z=!0,Sa="",V=[],xa=!1,Ga,Ha=[],Ta=[],Ia=[],Ua=!1,qa,Ja,Ka=[],ja=[],R=[],I=[],ya=[],ra=document.documentElement,L,sa,x,aa,
 ta,W,S,T,ba,E,M,ua,ka,la,y,ca,da,ea,fa,Va=function(a){function b(n){return(a||document).querySelectorAll('a[data-cc="'+n+'"], button[data-cc="'+n+'"]')}function c(n,p){n.preventDefault?n.preventDefault():n.returnValue=!1;m.accept(p);m.hideSettings();m.hide()}for(var d=b("c-settings"),f=b("accept-all"),l=b("accept-necessary"),q=b("accept-selection"),h=0;h<d.length;h++)d[h].setAttribute("aria-haspopup","dialog"),z(d[h],"click",function(n){n.preventDefault?n.preventDefault():n.returnValue=!1;m.showSettings(0)});
 for(h=0;h<f.length;h++)z(f[h],"click",function(n){c(n,"all")});for(h=0;h<q.length;h++)z(q[h],"click",function(n){c(n)});for(h=0;h<l.length;h++)z(l[h],"click",function(n){c(n,[])})},za=function(a,b){if(Object.prototype.hasOwnProperty.call(b,a))return a;if(0<va(b).length)return Object.prototype.hasOwnProperty.call(b,e.current_lang)?e.current_lang:va(b)[0]},Wa=function(){function a(c,d){var f=!1,l=!1;try{for(var q=c.querySelectorAll(b.join(':not([tabindex="-1"]), ')),h,n=q.length,p=0;p<n;)h=q[p].getAttribute("data-focus"),
